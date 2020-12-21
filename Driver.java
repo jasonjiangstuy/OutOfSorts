@@ -43,12 +43,12 @@ public class Driver{
       Arrays.sort(randData);
       Sorts.bubbleSort(randDataBubble);
 
-
       if( Arrays.equals(randData,randDataBubble)){
         System.out.println("Insert Correct!");
       }else{
        System.out.println("Insert Not Correct!!!!!!!!!");
       }
     }
+
   }
 }
