@@ -23,7 +23,7 @@ public class Sorts{
         for (int i = 0 ; i < data.length; i++){
             int minIndex = i;
 
-            for (int x = 0; i < data.length; x++){
+            for (int x = i+1; x < data.length; x++){
                 if (data[x] < data[minIndex]){
                     minIndex = x;
                 }
@@ -44,14 +44,16 @@ public class Sorts{
     public static void insertionSort(int[] data){
         for (int i = 0; i < data.length; i ++){
             int hold = data[i];
-            for (int x = i - 1; x >= 0; x--){ // steping backwards
-                data[x + 1] = data[x]; // shifting right
-                if (hold < data[x]){ // this is the right spot, go place
-                    data[x] = hold;
-                    break;
+            int x = i;
+            if (x > 0){
+                while(x > 0 && hold < data[x - 1]){
+                    data[x] = data[x - 1]; // shifting right
+                    x -= 1;
                 }
+            
+                data[x] = hold;
             }
-            data[0] = hold;
+            
 
         }
     }

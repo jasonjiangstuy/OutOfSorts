@@ -28,7 +28,15 @@ public class Driver{
     if(args[1].equals("testSelection")){
       int[] randDataBubble = Arrays.copyOf(randData,randData.length);
       Arrays.sort(randData);
-      Sorts.bubbleSort(randDataBubble);
+      Sorts.selectionSort(randDataBubble);
+      // for (int i: randData){
+      //   System.out.print(i+", ");
+      // }
+      // System.out.println("");
+
+      // for (int i: randDataBubble){
+      //   System.out.print(i+", ");
+      // }
 
 
       if( Arrays.equals(randData,randDataBubble)){
@@ -41,8 +49,7 @@ public class Driver{
     if(args[1].equals("testInsert")){
       int[] randDataBubble = Arrays.copyOf(randData,randData.length);
       Arrays.sort(randData);
-      Sorts.bubbleSort(randDataBubble);
-
+      Sorts.insertionSort(randDataBubble);
       if( Arrays.equals(randData,randDataBubble)){
         System.out.println("Insert Correct!");
       }else{
