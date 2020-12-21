@@ -11,6 +11,12 @@ public class Tester {
         x = new int[]{6, 1, 2, 3, 4, 5};
         Sorts.bubbleSort(x);
         System.out.println(myPrint(x));
+
+        // Selection Sort
+        x = new int[]{64, 25, 12, 22, 11};
+        Sorts.bubbleSort(x);
+        System.out.println(myPrint(x));
+        
     }
     public static String myPrint(int[] x){
         for (int i : x){
