@@ -37,6 +37,21 @@ public class Sorts{
 
 
     }
+    /**insertion sort of an int array. 
+     *@postcondition The array will be modified such that the elements will be in increasing order.
+    *@param data - the elements to be sorted.
+    */
+    public static void insertionSort(int[] data){
+        for (int i = 0; i < data.length; i ++){
+            int hold = data[i];
+            for (int x = i - 1; x >= 0; x--){ // steping backwards
+                data[x + 1] = data[x]; // shifting right
+                if (hold < data[x]){ // this is the right spot, go place
+                    data[x] = hold;
+                    break;
+                }
+            }
+            data[0] = hold;
 
-    
-  }
+        }
+    }
